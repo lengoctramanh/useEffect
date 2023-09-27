@@ -1,0 +1,31 @@
+body {
+    font-size: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background-color: #dae2f8;
+}
+h2 {
+    text-align: center;
+    color: red;
+}
+p:first-of-type {
+    margin-top: 40px;
+}
+#progressBarContainer {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #283048;
+}
+#progressBar {
+    transform: scale(0, 0);
+    opacity: 0;
+    transform-origin: top left;
+    background-color: #ffc837;
+}
+#progressBarContainer,
+#progressBar {
+    height: 20px;
+}
