@@ -8,21 +8,27 @@ h2 {
     text-align: center;
     color: red;
 }
+/* css cho đoạn đầu tiên cách header */
 p:first-of-type {
     margin-top: 40px;
 }
+
 #progressBarContainer {
     position: fixed;
+    /* làm thanh scrollBar ko bị mất khi kéo xuống */
     width: 100%;
     top: 0;
     left: 0;
     z-index: 10;
+    /* xác định xếp chồng lên nhau giữa các phần tử */
     background: #283048;
 }
 #progressBar {
     transform: scale(0, 0);
     opacity: 0;
     transform-origin: top left;
+    /* xác định điểm xuất phát của thanh scrollBar chạy từ
+    từ góc trên bên trái của phần tử */
     background-color: #ffc837;
 }
 #progressBarContainer,

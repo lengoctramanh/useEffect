@@ -8,13 +8,29 @@ const App = () => {
       document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scroll = `${totalScroll / windowHeight}`;
     const progressBar = document.getElementById('progressBar');
+    /**khi kéo xuống thì tự động
+    tính ra các số liệu */
+    console.info(progressBar);
+    /** thuộc tính làm bar mượt hơn */
     progressBar.style.transform = `scale(${scroll},1)`;
+    /**khi kéo xuống một đoạn nhỏ trong p
+     * thì màu đổi đậm dần
+     */
     progressBar.style.opacity = `${scroll}`;
   };
-
+  /**window là cao cấp nhất,có tất các thuộc tính,
+   * và name event,nên từ giờ dùng window.
+   */
   useEffect(() => {
     window.addEventListener('scroll', handleProgressBar);
   });
+  // window.addEventListener('scroll', () => {
+  //   console.log('hello');
+  // });
+  /**khi scroll xuống thì chữ hello nó tự động tăng lên,và khi scroll
+   * nó sẽ thực thi hàm handleProgressBar,nó tự động tính toán pixel
+   */
+
   return (
     <Fragment>
       <div className="App">
@@ -24,8 +40,8 @@ const App = () => {
         <h2>Progress Bar</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-          a galley of type and scrambled it to make a type specimen book. It has survived not only
+          been the industry standard dummy text ever since the 1500s, when an unknown printer took
+          galley of type and scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting, remaining essentially
           unchanged. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
           in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
@@ -47,11 +63,11 @@ const App = () => {
           to using Content here, content here, making it look like readable English.
         </p>
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-          voluptatem sequi nesciunt.
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremquelaudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+          quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+          voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+          ratione voluptatem sequi nesciunt.
         </p>
         <p>
           But I must explain to you how all this mistaken idea of denouncing pleasure and praising
