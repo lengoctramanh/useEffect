@@ -1,29 +1,21 @@
-import React, { Fragment, useEffect } from 'react';
-
+import React, { Fragment, useEffect, useState } from 'react';
+import UpButton from './components/UpButton';
 import './Style.css';
 const App = () => {
-  let handleProgressBar = () => {
+  const handleProgressBar = () => {
     const totalScroll = document.documentElement.scrollTop;
     const windowHeight =
       document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scroll = `${totalScroll / windowHeight}`;
     const progressBar = document.getElementById('progressBar');
-    /**khi kéo xuống thì tự động
-    tính ra các số liệu */
-    console.info(progressBar);
-    /** thuộc tính làm bar mượt hơn */
     progressBar.style.transform = `scale(${scroll},1)`;
-    /**khi kéo xuống một đoạn nhỏ trong p
-     * thì màu đổi đậm dần
-     */
     progressBar.style.opacity = `${scroll}`;
   };
-  /**window là cao cấp nhất,có tất các thuộc tính,
-   * và name event,nên từ giờ dùng window.
-   */
+
   useEffect(() => {
     window.addEventListener('scroll', handleProgressBar);
   });
+
   // window.addEventListener('scroll', () => {
   //   console.log('hello');
   // });
@@ -40,11 +32,11 @@ const App = () => {
         <h2>Progress Bar</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry standard dummy text ever since the 1500s, when an unknown printer took
-          galley of type and scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting, remaining essentially
-          unchanged. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-          in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+          been the standard dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived not only five
+          centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+          of classical Latin literature from 45 BC, making it over 2000 years old.
         </p>
         <p>
           This book is a treatise on the theory of ethics, very popular during the Renaissance. The
@@ -85,6 +77,48 @@ const App = () => {
           has any right to find fault with a man who chooses to enjoy a pleasure that has no
           annoying consequences, or one who avoids a pain that produces no resultant pleasure?
         </p>
+        <p>
+          Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+          because it is pain, but because occasionally circumstances occur in which toil and pain
+          can procure him some great pleasure. To take a trivial example, which of us ever
+          undertakes laborious physical exercise, except to obtain some advantage from it? But who
+          has any right to find fault with a man who chooses to enjoy a pleasure that has no
+          annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+        </p>
+        <p>
+          Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+          because it is pain, but because occasionally circumstances occur in which toil and pain
+          can procure him some great pleasure. To take a trivial example, which of us ever
+          undertakes laborious physical exercise, except to obtain some advantage from it? But who
+          has any right to find fault with a man who chooses to enjoy a pleasure that has no
+          annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+        </p>
+        <p>
+          Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+          because it is pain, but because occasionally circumstances occur in which toil and pain
+          can procure him some great pleasure. To take a trivial example, which of us ever
+          undertakes laborious physical exercise, except to obtain some advantage from it? But who
+          has any right to find fault with a man who chooses to enjoy a pleasure that has no
+          annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+        </p>
+        <p>
+          Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+          because it is pain, but because occasionally circumstances occur in which toil and pain
+          can procure him some great pleasure. To take a trivial example, which of us ever
+          undertakes laborious physical exercise, except to obtain some advantage from it? But who
+          has any right to find fault with a man who chooses to enjoy a pleasure that has no
+          annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+        </p>
+        <p>
+          Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+          because it is pain, but because occasionally circumstances occur in which toil and pain
+          can procure him some great pleasure. To take a trivial example, which of us ever
+          undertakes laborious physical exercise, except to obtain some advantage from it? But who
+          has any right to find fault with a man who chooses to enjoy a pleasure that has no
+          annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+        </p>
+
+        <UpButton />
       </div>
     </Fragment>
   );
