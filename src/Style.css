@@ -57,3 +57,16 @@ span {
     width: 80%;
     margin: 0 auto;
 }
+.btn-list {
+    display: flex;
+    gap: 30px;
+}
+button {
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #ffd6e4;
+    color: #e21033;
+    border: 1px solid transparent;
+    cursor: pointer;
+}

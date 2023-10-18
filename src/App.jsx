@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import UpButton from './components/UpButton';
+import Test1 from './Test1';
 import './Style.css';
 const App = () => {
   const handleProgressBar = () => {
@@ -122,6 +123,7 @@ const App = () => {
         </div>
 
         <UpButton />
+        <Test1 />
       </div>
     </Fragment>
   );
