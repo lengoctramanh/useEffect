@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-// import axios from 'axios';
+
 const Test1 = () => {
   const [posts, setPosts] = useState([]);
 
@@ -31,8 +31,6 @@ const Test1 = () => {
       <h1> List:</h1>
       <div className="btn-list">
         <button onClick={handlePost}>Post List</button>
-        {/* <button>Comments List</button>
-        <button>User List</button> */}
       </div>
 
       <ul>
