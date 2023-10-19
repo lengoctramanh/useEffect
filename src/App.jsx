@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import UpButton from './components/UpButton';
 import Test1 from './Test1';
+import Test2 from './Test2';
+import Test3 from './Test3';
 import './Style.css';
 const App = () => {
   const handleProgressBar = () => {
@@ -15,7 +17,7 @@ const App = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleProgressBar);
-  });
+  }, []);
 
   // window.addEventListener('scroll', () => {
   //   console.log('hello');
@@ -124,6 +126,8 @@ const App = () => {
 
         <UpButton />
         <Test1 />
+        <Test2 />
+        <Test3 />
       </div>
     </Fragment>
   );

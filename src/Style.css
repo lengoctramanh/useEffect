@@ -59,7 +59,7 @@ span {
 }
 .btn-list {
     display: flex;
-    gap: 30px;
+    gap: 80px;
 }
 button {
     padding: 15px;
@@ -69,4 +69,11 @@ button {
     color: #e21033;
     border: 1px solid transparent;
     cursor: pointer;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn-list {
+    margin: 0 auto;
+}
+#test_2 {
+    border: 1px solid red;
 }
