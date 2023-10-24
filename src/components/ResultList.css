@@ -1,0 +1,16 @@
+.results-list {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 1px blue;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 200px;
+}
+li {
+    padding: 8px 20px;
+}
+li:hover {
+    background-color: #efefef;
+}

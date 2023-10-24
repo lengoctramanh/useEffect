@@ -22,8 +22,6 @@ label {
     padding: 15px;
     border-radius: 20px;
     border: 1px solid transparent;
-    outline: none;
-    box-shadow: 0 0 3px blue;
 }
 label {
     color: royalblue;
